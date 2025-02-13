@@ -59,7 +59,7 @@ wait_for_notifications() {
 	is_led_on=0
 	if [ "$SLEEP_CHECK" == "1" ]; then
 		SLEEP_CHECK="0"
-		sleep 1
+		sleep 3
 		if [ "$(cat /sys/class/backlight/ae94000.dsi.0/bl_power)" == "0" ]; then
 		echo 4 > /sys/class/backlight/ae94000.dsi.0/bl_power
 		fi
